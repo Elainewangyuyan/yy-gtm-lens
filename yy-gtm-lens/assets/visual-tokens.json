@@ -1,0 +1,43 @@
+{
+  "page": {
+    "webMaxWidthPx": 1120,
+    "aspectRatio": "210/297",
+    "pdfSize": "A4 portrait",
+    "pdfPaddingMm": {"top": 14, "right": 14, "bottom": 12, "left": 14},
+    "sectionNumberColumnMm": 13,
+    "columnGapMm": 5,
+    "contentIndentMm": 18,
+    "footerSafeZoneMm": 12
+  },
+  "typography": {
+    "webPageTitlePx": [31, 47],
+    "pdfPageTitlePt": 18,
+    "pdfBodyPt": [8.35, 9],
+    "pdfTitleLineHeight": 1.22,
+    "pdfBodyLineHeight": 1.62
+  },
+  "spacing": {
+    "titleToTagsMinMm": 3.2,
+    "tagsToSignalsMinMm": 4,
+    "signalsToBodyMinMm": 5,
+    "maxOverlapPx": 0,
+    "maxVerticalOverflowPx": 0
+  },
+  "colors": {
+    "ink": "#182235",
+    "inkSecondary": "#34425A",
+    "muted": "#748096",
+    "blue": "#667FF0",
+    "blueDeep": "#4057C9",
+    "mint": "#5AB79F",
+    "violet": "#8E72D2",
+    "peach": "#DC8C68",
+    "gold": "#C89842",
+    "paper": "#F4F7FB"
+  },
+  "releaseGate": {
+    "p0": 0,
+    "p1": 0,
+    "p2": "fixed-or-explicitly-accepted"
+  }
+}

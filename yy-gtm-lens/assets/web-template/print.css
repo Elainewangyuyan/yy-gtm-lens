@@ -1,0 +1,76 @@
+@page { size: A4; margin: 0; }
+
+@media print {
+  html, body { width: 210mm; margin: 0; background: white !important; }
+  body { color: #182235; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+  .progress, .topbar, .nav, .comments, .no-print, .opinion-form,
+  .opinion-card button { display: none !important; }
+  .layout, .report { display: block; width: 210mm; margin: 0; padding: 0; }
+  .page {
+    width: 210mm; height: 297mm; min-height: 297mm; margin: 0;
+    padding: 14mm 14mm 12mm; overflow: hidden; border: 0; border-radius: 0;
+    box-shadow: none; break-after: page; page-break-after: always;
+  }
+  .page:last-of-type { break-after: auto; page-break-after: auto; }
+  .cover { padding: 20mm 16mm 16mm; }
+  .cover-copy { padding-top: 24mm; }
+  .cover h1 { max-width: 155mm; font-size: 34pt; }
+  .cover p { max-width: 155mm; font-size: 10.5pt; }
+  .head { grid-template-columns: 13mm minmax(0,1fr); gap: 5mm; }
+  .num { width: 12mm; height: 12mm; border-radius: 4mm; font-size: 9pt; }
+  .title-row {
+    display: grid; grid-template-columns: minmax(0,1fr); gap: 3.2mm;
+    align-items: start; justify-content: stretch;
+  }
+  .title-row > div:first-child { min-width: 0; }
+  .title-row h2 {
+    max-width: none; padding-bottom: 3.2mm;
+    font-size: 18pt; line-height: 1.22; letter-spacing: -.035em;
+    text-wrap: balance; word-break: keep-all;
+  }
+  .title-row h2:after { width: 18mm; height: 1mm; }
+  .title-row h2:before { width: 2.4mm; height: 2.4mm; margin-right: 2.5mm; }
+  .tags {
+    display: grid; grid-template-columns: repeat(3,minmax(0,1fr));
+    width: 100%; max-width: none; gap: 2mm; justify-content: stretch;
+  }
+  .tag {
+    display: flex; align-items: center; justify-content: center;
+    min-width: 0; min-height: 7.5mm; padding: 1.2mm 2mm;
+    white-space: normal; text-align: center; font-size: 6.6pt; line-height: 1.25;
+  }
+  .signals { gap: 2mm; margin: 4mm 0 5mm; padding-left: 18mm; }
+  .signal { min-height: 16mm; padding: 2.6mm 3mm; border-radius: 3.5mm; }
+  .signal small { font-size: 5.8pt; }
+  .signal strong { font-size: 11pt; }
+  .signal span { font-size: 6.4pt; }
+  .copy { margin-left: 18mm; font-size: 8.35pt; line-height: 1.62; }
+  .judgment { margin-bottom: 4mm; padding: 3mm 3.5mm; font-size: 9.3pt; }
+  .copy p { margin-bottom: 3mm; }
+  .copy h3 { margin: 4mm 0 1.5mm; font-size: 11pt; }
+  .copy ul, .copy ol { margin: 1.5mm 0 3mm; padding-left: 5mm; }
+  .copy li { margin: 1mm 0; break-inside: avoid; }
+  .copy table { margin: 3mm 0; font-size: 7pt; }
+  .copy th, .copy td { padding: 1.6mm 2mm; }
+  .source-list { column-gap: 6mm; font-size: 6.9pt; line-height: 1.4; }
+  .source-list li { margin-bottom: 1.4mm; overflow-wrap: anywhere; }
+  .visual {
+    right: auto; bottom: auto; left: auto; width: auto;
+    min-height: 46mm; margin: 5mm 0 0 18mm; padding: 3.5mm;
+    border-radius: 4mm; box-shadow: none;
+  }
+  .visual-grid { gap: 2mm; }
+  .v-card { min-height: 30mm; padding: 3mm; border-radius: 3mm; }
+  .v-card small { font-size: 5.8pt; }
+  .v-card strong { font-size: 8pt; }
+  .v-card span { font-size: 5.8pt; }
+  .bars { gap: 2.5mm; }
+  .bar { grid-template-columns: 25mm 1fr 8mm; font-size: 6pt; }
+  .opinions { margin: 4mm 0 0 18mm; padding: 3.5mm; border-radius: 4mm; }
+  .opinion-grid { gap: 2mm; margin-top: 2.5mm; }
+  .opinion-card { padding: 2.6mm; break-inside: avoid; }
+  .opinion-card h4 { margin: 1mm 0; font-size: 8.5pt; }
+  .opinion-card p { font-size: 6.8pt; }
+  .footer { right: 14mm; bottom: 5mm; left: 14mm; font-size: 6pt; }
+}
+

@@ -1,0 +1,110 @@
+@page { size: A4; margin: 0; }
+
+@media print {
+  :root { --paper: #fff; }
+  html, body { width: 210mm; margin: 0; background: white !important; }
+  body {
+    color: #182235; print-color-adjust: exact; -webkit-print-color-adjust: exact;
+  }
+  .reading-progress, .topbar, .side-nav, .comments-section, .page-footer,
+  .no-print, .opinion-form, .opinion-delete, .opinion-note { display: none !important; }
+  .layout, .report { display: block; width: 210mm; margin: 0; padding: 0; }
+  .report-page {
+    width: 210mm; height: 297mm; min-height: 297mm; margin: 0;
+    padding: 14mm 14mm 12mm; overflow: hidden; border: 0; border-radius: 0;
+    box-shadow: none; break-after: page; page-break-after: always;
+  }
+  .report-page:last-of-type { break-after: auto; page-break-after: auto; }
+  .cover { padding: 20mm 16mm 16mm; }
+  .cover-copy { padding-top: 24mm; }
+  .cover h1 { max-width: 155mm; font-size: 34pt; }
+  .cover-summary { max-width: 155mm; font-size: 10.5pt; }
+  .cover-meta { margin-top: 9mm; }
+  .orbit { transform: scale(.78); transform-origin: right bottom; }
+  .page-header { grid-template-columns: 13mm minmax(0,1fr); gap: 5mm; }
+  .page-number { width: 12mm; height: 12mm; border-radius: 4mm; font-size: 9pt; }
+  .page-title-row {
+    display: grid; grid-template-columns: minmax(0,1fr); gap: 3.2mm;
+    align-items: start; justify-content: stretch;
+  }
+  .page-title-row > div:first-child { min-width: 0; }
+  .page-title-row h2 {
+    max-width: none; padding-bottom: 3.2mm;
+    font-size: 18pt; line-height: 1.22; letter-spacing: -.035em;
+    text-wrap: balance; word-break: keep-all;
+  }
+  .page-title-row h2::after { width: 18mm; height: 1mm; }
+  .page-title-row h2::before { width: 2.4mm; height: 2.4mm; margin-right: 2.5mm; }
+  .judgement-tags {
+    display: grid; grid-template-columns: repeat(3,minmax(0,1fr));
+    justify-content: stretch; width: 100%; max-width: none; gap: 2mm;
+  }
+  .judgement-tag {
+    display: flex; align-items: center; justify-content: center;
+    min-width: 0; min-height: 7.5mm; padding: 1.2mm 2mm;
+    font-size: 6.6pt; line-height: 1.25; text-align: center; white-space: normal;
+  }
+  .signal-strip { gap: 2mm; margin: 4mm 0 5mm; padding-left: 18mm; }
+  .signal { min-height: 16mm; padding: 2.6mm 3mm; border-radius: 3.5mm; }
+  .signal small { font-size: 5.8pt; }
+  .signal strong { font-size: 11pt; }
+  .signal span { font-size: 6.4pt; }
+  .page-copy { max-width: none; margin-left: 18mm; }
+  .markdown-body { font-size: 8.35pt; line-height: 1.62; }
+  .markdown-body > p:first-child:has(> strong:first-child) {
+    margin-bottom: 4mm; padding: 3mm 3.5mm; border-left-width: 1mm;
+    border-radius: 0 3mm 3mm 0; font-size: 9.3pt;
+  }
+  .markdown-body p { margin-bottom: 3mm; }
+  .markdown-body h3 { margin: 4mm 0 1.5mm; font-size: 11pt; }
+  .markdown-body ul, .markdown-body ol { margin: 1.5mm 0 3mm; padding-left: 5mm; }
+  .markdown-body li { margin: 1mm 0; break-inside: avoid; }
+  .markdown-body table { margin: 3mm 0; font-size: 7pt; border-radius: 3mm; }
+  .markdown-body th, .markdown-body td { padding: 1.6mm 2mm; }
+  .source-page .markdown-body { font-size: 6.9pt; line-height: 1.4; }
+  .source-page .markdown-body h3 { margin: 2.5mm 0 1.2mm; font-size: 9pt; }
+  .source-page .markdown-body ol { column-gap: 6mm; }
+  .source-page .markdown-body li { margin-bottom: 1.4mm; overflow-wrap: anywhere; }
+  .section-visual {
+    right: auto; bottom: auto; left: auto; width: auto;
+    min-height: 46mm; margin: 5mm 0 0 18mm; padding: 3.5mm;
+    border-radius: 4mm; box-shadow: none;
+  }
+  .visual-icon { width: 6mm; height: 6mm; }
+  .section-visual strong { font-size: 8pt; }
+  .section-visual span { font-size: 5.8pt; }
+  .journey-node { min-height: 32mm; padding: 3mm; border-radius: 3mm; }
+  .matrix-card { width: 39mm; min-height: 16mm; padding: 2mm 2mm 2mm 10mm; border-radius: 3mm; box-shadow: none; }
+  .matrix-card .visual-icon { left: 2.5mm; top: 4mm; }
+  .visual-stack > div { min-height: calc(25mm + var(--level)*3mm); padding: 3mm; border-radius: 3mm; }
+  .visual-funnel > div { min-height: calc(34mm - var(--step)*3mm); padding: 4mm 2mm; }
+  .unknown-core { min-height: 33mm; padding: 4mm; }
+  .confidence-bars { gap: 2.5mm; }
+  .confidence-bars > div { grid-template-columns: 25mm 1fr 8mm; font-size: 6pt; }
+  .visual-capital { min-height: 48mm; }
+  .capital-rail { top: 17mm; right: 12mm; left: 12mm; }
+  .capital-point { top: 7mm; width: 29mm; }
+  .capital-point i { width: 4mm; height: 4mm; margin: 6mm auto 2mm; border-width: 1mm; }
+  .investor-cloud { right: 4mm; bottom: 2mm; left: 4mm; }
+  .model-core { top: 8mm; width: 38mm; height: 34mm; padding: 5mm; }
+  .model-satellite { width: 25mm; padding: 2mm; border-radius: 3mm; box-shadow: none; }
+  .model-satellite.sat-0,.model-satellite.sat-2 { left: 4mm; }.model-satellite.sat-1,.model-satellite.sat-3 { right: 4mm; }
+  .open-side,.balance-side,.decision-node,.source-tier { min-height: 34mm; padding: 4mm; border-radius: 3mm; }
+  .open-balance i,.balance-center i { width: 14mm; height: 14mm; border-width: 2mm; }
+  .founder-main,.founder-pair div { padding: 4mm; border-radius: 3mm; }
+  .org-top { width: 62mm; padding: 2.5mm 3mm 2.5mm 12mm; border-radius: 3mm; }
+  .org-branch { height: 8mm; }
+  .org-node { bottom: 2mm; min-height: 20mm; padding: 3mm 2mm 3mm 10mm; border-radius: 3mm; }
+  .org-node .visual-icon { left: 2mm; top: 4mm; }
+  .visual-roadmap > div { min-height: 32mm; padding: 4mm; border-radius: 3mm; }
+  .visual-roadmap i { width: 7mm; height: 7mm; margin: 2mm 0; }
+  .opinion-studio { margin: 4mm 0 0 18mm; padding: 3.5mm; border-radius: 4mm; }
+  .opinion-head h3 { font-size: 11pt; }
+  .opinion-head p { font-size: 6.4pt; }
+  .opinion-grid { gap: 2mm; margin-top: 2.5mm; }
+  .opinion-card { padding: 2.6mm; border-radius: 3mm; break-inside: avoid; }
+  .opinion-card h4 { margin: 1mm 0; font-size: 8.5pt; }
+  .opinion-card p { font-size: 6.8pt; }
+  .opinion-meta { margin-top: 1.5mm; }
+  .report-page-footer { right: 14mm; bottom: 5mm; left: 14mm; font-size: 6pt; }
+}

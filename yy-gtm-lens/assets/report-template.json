@@ -1,0 +1,85 @@
+{
+  "meta": {
+    "company": "Example AI",
+    "legal_or_business_name": "Example AI",
+    "subtitle": "从核心产品到可持续增长",
+    "research_date": "2026-06-25",
+    "language": "zh-CN",
+    "audience": "AI startup founders and GTM professionals",
+    "output_slug": "example-ai"
+  },
+  "sections": [
+    {
+      "number": "01",
+      "title": "总览与前世今生",
+      "judgment": "用一到两行写出当前定位、关键转向和总体判断。",
+      "tags": [
+        {"label": "总体判断", "value": "待研究"},
+        {"label": "技术势能", "value": "待研究"},
+        {"label": "商业透明度", "value": "待研究"}
+      ],
+      "signals": [
+        {"label": "COMPANY STAGE", "value": "待补充", "note": "注明时间"},
+        {"label": "PRODUCT LAYERS", "value": "待补充", "note": "注明口径"},
+        {"label": "RESEARCH DATE", "value": "2026-06-25", "note": "研究截止"}
+      ],
+      "visual": {
+        "type": "timeline",
+        "items": [
+          {"label": "起点", "value": "待补充", "note": "关键事件"}
+        ]
+      },
+      "blocks": [
+        {"type": "paragraph", "text": "写入有来源编号的研究正文。[来源 1]"}
+      ]
+    }
+  ],
+  "private_section": {
+    "number": "09",
+    "title": "是否值得 Reach Out",
+    "judgment": "区分值得联系与值得加入。",
+    "tags": [
+      {"label": "联系判断", "value": "待研究"},
+      {"label": "加入判断", "value": "待尽调"},
+      {"label": "角色匹配", "value": "待验证"}
+    ],
+    "signals": [
+      {"label": "DECISION", "value": "待研究", "note": "仅限本人"},
+      {"label": "AUTHORITY", "value": "待验证", "note": "产品与预算权限"},
+      {"label": "EQUITY", "value": "待验证", "note": "股权与流动性"}
+    ],
+    "visual": {"type": "gates", "items": []},
+    "blocks": []
+  },
+  "sources": [
+    {
+      "id": 1,
+      "category": "公司与产品",
+      "title": "Official website",
+      "url": "https://example.com",
+      "source_type": "primary",
+      "published_date": "",
+      "accessed_date": "2026-06-25",
+      "notes": ""
+    }
+  ],
+  "owner_views": [],
+  "comments": {
+    "provider": "giscus",
+    "enabled": false,
+    "repo": "",
+    "repo_id": "",
+    "category": "General",
+    "category_id": ""
+  },
+  "quality_review": {
+    "status": "pending",
+    "reviewed_date": "",
+    "reviewer": "",
+    "summary": "",
+    "p0": [],
+    "p1": [],
+    "p2": [],
+    "unresolved_unknowns": []
+  }
+}

@@ -1,0 +1,20 @@
+.DS_Store
+__pycache__/
+*.pyc
+
+# Local generated workspaces
+output/
+exports/*private*
+private-notes/
+private.md
+private-09.md
+*private*
+*私密*
+*第09*
+*section-09*
+
+# Local environment
+.env
+.venv/
+node_modules/
+

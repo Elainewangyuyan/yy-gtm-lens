@@ -1,0 +1,4 @@
+interface:
+  display_name: "YY GTM Lens"
+  short_description: "YY视角AI公司GTM研究与可视化报告"
+  default_prompt: "Use $yy-gtm-lens to research an AI-native company, independently QA the findings, and generate the synchronized Chinese report, website, PDFs, and safe publish bundle."
