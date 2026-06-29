@@ -64,6 +64,26 @@ Available examples:
 
 Each example intentionally excludes private section 09, QA notes, and intermediate build artifacts.
 
+## Example websites
+
+On GitHub, clicking `website/index.html` in the file browser shows source code. To let users open the examples as real websites, enable GitHub Pages:
+
+1. Go to `Settings` → `Pages`.
+2. Under `Build and deployment`, choose `Deploy from a branch`.
+3. Branch: `main`.
+4. Folder: `/ (root)`.
+5. Save.
+
+After GitHub Pages is enabled, the example websites will be available at:
+
+- `https://elainewangyuyan.github.io/yy-gtm-lens/examples/kimi/website/`
+- `https://elainewangyuyan.github.io/yy-gtm-lens/examples/minimax/website/`
+- `https://elainewangyuyan.github.io/yy-gtm-lens/examples/glean/website/`
+
+The Pages landing page will be:
+
+- `https://elainewangyuyan.github.io/yy-gtm-lens/`
+
 ## Privacy rule
 
 Section 09 is private. It should never be included in:
