@@ -11,13 +11,11 @@ Build every deliverable from one structured JSON source. Use the current date as
 
 Given only a company name, produce:
 
-- Chinese public report, 5,000–8,000 Chinese characters excluding sources.
-- Public sections 01–08 and 10.
-- Physically separated private section 09.
-- Research QA memo and revised final text.
-- Responsive public website with owner-view input and optional comments.
-- Browser-printable PDF plus programmatic public/private PDFs.
-- Visual QA evidence and a GitHub-safe `publish/` directory.
+- `article.md`: Chinese public report, 5,000–8,000 Chinese characters excluding sources; sections 01–08 and 10.
+- `website/`: responsive public website with owner-view input and optional comments.
+- `report.pdf`: public PDF report.
+
+Use research QA, visual QA, private section 09, and leakage checks as internal workflow artifacts. Keep section 09 physically separated and out of public deliverables.
 
 Ask only when a missing choice materially changes the work. Otherwise state assumptions and proceed.
 
@@ -76,6 +74,10 @@ Expected output:
 
 ```text
 output/
+├── deliverables/
+│   ├── article.md
+│   ├── website/
+│   └── report.pdf
 ├── research/
 │   ├── public.md
 │   ├── private-09.md

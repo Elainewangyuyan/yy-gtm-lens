@@ -32,6 +32,8 @@ def main():
         "publish/index.html",
         "qa/visual-qa.md",
         "qa/visual-tokens.json",
+        "deliverables/article.md",
+        "deliverables/website/index.html",
     ]
     for rel in required:
         if not (root / rel).is_file():
@@ -43,11 +45,20 @@ def main():
     for pdf in pdfs:
         if pdf.stat().st_size < 1000 or not pdf.read_bytes().startswith(b"%PDF"):
             errors.append(f"Invalid PDF: {pdf.name}")
+    public_pdf = root / "deliverables" / "report.pdf"
+    if public_pdf.exists():
+        if public_pdf.stat().st_size < 1000 or not public_pdf.read_bytes().startswith(b"%PDF"):
+            errors.append("Invalid public deliverable PDF: deliverables/report.pdf")
+    else:
+        warnings.append("Missing public deliverable PDF: deliverables/report.pdf")
 
     publish_files = [p for p in (root / "publish").rglob("*") if p.is_file()]
+    deliverable_site_files = [
+        p for p in (root / "deliverables" / "website").rglob("*") if p.is_file()
+    ]
     public_blob = "\n".join(
         p.read_text(encoding="utf-8", errors="ignore")
-        for p in publish_files
+        for p in publish_files + deliverable_site_files
         if p.suffix.lower() in {".html", ".js", ".css", ".json", ".md", ".txt"}
     )
     forbidden_paths = [

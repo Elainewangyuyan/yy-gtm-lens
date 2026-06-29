@@ -8,13 +8,11 @@ YY GTM Lens is a Codex skill for researching AI-native companies through a GTM, 
 
 Given an AI-native company or AI business unit, the skill can generate:
 
-- A Chinese public research report, usually 5,000–8,000 Chinese characters.
-- Public sections 01–08 and 10.
-- A physically separated private section 09 for career / reach-out judgment.
-- Source-linked research QA.
-- A responsive public website.
-- Public and private PDFs.
-- A GitHub-safe public publish bundle.
+1. `article.md` — a Chinese research article, usually 5,000–8,000 Chinese characters.
+2. `website/` — a responsive visual website.
+3. `report.pdf` — a public PDF report.
+
+Research QA, visual QA, private section 09, and publish-bundle checks are internal workflow artifacts. They are not shown as public example outputs.
 
 ## Latest-date research
 
@@ -41,7 +39,7 @@ Then restart Codex if the skill does not appear immediately.
 Example prompt:
 
 ```text
-Use $yy-gtm-lens to research Glean and generate the Chinese report, QA memo, public website, public PDF, and private section 09 PDF.
+Use $yy-gtm-lens to research Glean and generate the Chinese article, website, and public PDF.
 ```
 
 For a text-first workflow:
@@ -52,13 +50,19 @@ Use $yy-gtm-lens to research Perplexity. Stop after the reviewed public/private 
 
 ## Examples
 
-This repository includes public-only examples:
+This repository includes public-only examples. Each example contains exactly three public outputs:
+
+- `article.md`
+- `website/`
+- `report.pdf`
+
+Available examples:
 
 - `examples/kimi`
 - `examples/minimax`
 - `examples/glean`
 
-Each example intentionally excludes private section 09.
+Each example intentionally excludes private section 09, QA notes, and intermediate build artifacts.
 
 ## Privacy rule
 

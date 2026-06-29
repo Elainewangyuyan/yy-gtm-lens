@@ -706,6 +706,7 @@ def main():
     exports = output / "exports"
     publish = output / "publish"
     qa = output / "qa"
+    deliverables = output / "deliverables"
     for directory in (research_dir, public_site, private_notes, exports, publish, qa):
         directory.mkdir(parents=True, exist_ok=True)
 
@@ -729,6 +730,14 @@ def main():
         create_pdf(data, exports / f"{slug}-public.pdf")
         create_pdf(data, exports / f"{slug}-private-09.pdf", private=True)
 
+    if deliverables.exists():
+        shutil.rmtree(deliverables)
+    deliverables.mkdir(parents=True, exist_ok=True)
+    shutil.copy2(research_dir / "public.md", deliverables / "article.md")
+    shutil.copytree(publish, deliverables / "website")
+    if not args.skip_pdf:
+        shutil.copy2(exports / f"{slug}-public.pdf", deliverables / "report.pdf")
+
     qa_text = f"""# Visual QA
 
 - Status: pending
@@ -749,6 +758,7 @@ Required:
     (qa / "visual-qa.md").write_text(qa_text, encoding="utf-8")
     shutil.copy2(skill_dir / "assets" / "visual-tokens.json", qa / "visual-tokens.json")
     print(f"Rendered {data['meta']['company']} to {output}")
+    print(f"Public deliverables: {deliverables}")
 
 
 if __name__ == "__main__":
