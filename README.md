@@ -74,15 +74,15 @@ On GitHub, clicking `website/index.html` in the file browser shows source code. 
 4. Folder: `/ (root)`.
 5. Save.
 
-After GitHub Pages is enabled, the example websites will be available at:
+The live example websites are:
 
-- `https://elainewangyuyan.github.io/yy-gtm-lens/examples/kimi/website/`
-- `https://elainewangyuyan.github.io/yy-gtm-lens/examples/minimax/website/`
-- `https://elainewangyuyan.github.io/yy-gtm-lens/examples/glean/website/`
+- [Kimi website](https://elainewangyuyan.github.io/yy-gtm-lens/examples/kimi/website/)
+- [MiniMax website](https://elainewangyuyan.github.io/yy-gtm-lens/examples/minimax/website/)
+- [Glean website](https://elainewangyuyan.github.io/yy-gtm-lens/examples/glean/website/)
 
-The Pages landing page will be:
+The Pages landing page is:
 
-- `https://elainewangyuyan.github.io/yy-gtm-lens/`
+- [YY GTM Lens examples](https://elainewangyuyan.github.io/yy-gtm-lens/)
 
 ## Privacy rule
 
